@@ -45,7 +45,7 @@ bench: ## Track 01 — TTFT/TPOT/P95 baseline + Q4_K_M vs Q2_K
 # ─────────────────────────────────────────────────────────────
 
 serve: ## Track 02 — start llama-server on :8080 (foreground)
-	@bash 02-llama-cpp-server/start-server.sh
+	@PATH="$(VENV)/bin:$(PATH)" bash 02-llama-cpp-server/start-server.sh
 
 smoke: ## Track 02 — smoke-test the running server
 	@$(PY) 02-llama-cpp-server/smoke-test.py
